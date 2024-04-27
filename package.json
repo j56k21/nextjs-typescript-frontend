@@ -104,5 +104,9 @@
   "msw": {
     "workerDirectory": "public"
   },
-  "packageManager": "yarn@3.6.3"
+  "packageManager": "yarn@4.1.1",
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": ".prettierrc.js",
+  "author": "",
+  "license": "ISC"
 }
