@@ -77,5 +77,6 @@
     "security/detect-non-literal-fs-filename": "error",
     "security/detect-unsafe-regex": "error",
     "security/detect-non-literal-regexp": "error"
-  }
+  },
+  "ignorePatterns": [".eslintrc.cjs"]
 }

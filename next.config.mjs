@@ -1,10 +1,21 @@
 /** @type {import('next').NextConfig} */
-const path = require('path');
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
+
+import { createRequire } from 'module';
+
+import express from 'express';
+import path from 'path';
+
+const app = express();
+//__dirname 선언
+const __dirname = path.resolve();
+
+app.use(express.static(path.join(__dirname, '../public')));
+
+const withBundleAnalyzer = createRequire(import.meta.url)('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
-const withPlugins = require('next-compose-plugins');
-const { i18n } = require('./next-i18next.config');
+const withPlugins = createRequire(import.meta.url)('next-compose-plugins');
+const { i18n } = createRequire(import.meta.url)('./next-i18next.config');
 
 const plugins = [[withBundleAnalyzer]];
 const port = process.env.PORT || '3000';
@@ -49,5 +60,3 @@ const nextConfig = {
     ];
   },
 };
-
-module.exports = withPlugins(plugins, nextConfig);
