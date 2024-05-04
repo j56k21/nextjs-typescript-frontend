@@ -3,7 +3,9 @@ import axios from 'axios';
 
 const TEST = () => {
   useEffect(() => {
-    axios.get('/test');
+    axios.get('/api/test',{
+      headers:{'Content-Type': 'application/json;charset=UTF-8'}
+    });
   });
 
   return 'Hello World';
