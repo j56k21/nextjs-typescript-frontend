@@ -1,3 +1,18 @@
 {
-    "typescript.tsdk": "node_modules\\typescript\\lib"
+  "search.exclude": {
+    "**/.yarn": true,
+    "**/.pnp.*": true
+  },
+  "eslint.nodePath": ".yarn/sdks",
+  "prettier.prettierPath": ".yarn/sdks/prettier/index.cjs",
+  "typescript.tsdk": ".yarn/sdks/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  // 파일을 저장할 때마다 `eslint` 규칙에 따라 자동으로 코드를 수정
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  // `prettier`를 기본 포맷터로 지정
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // 파일을 저장할 때마다 포매팅 실행
+  "editor.formatOnSave": true
 }
