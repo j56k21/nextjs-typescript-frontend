@@ -34,3 +34,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# yarn
+.yarn/cache/**.zip
+.yarn/unplugged/**
+
+# pnp
+/.pnp.cjs
+
