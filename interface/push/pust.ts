@@ -1,11 +1,11 @@
-export interface IPushMessage{
-    /**
-     * 제목
-     */
-    title?: String;
+export interface IPushMessage {
+  /**
+   * 제목
+   */
+  title?: String;
 
-    /**
-     * 메시지
-     */
-    message?: String;
+  /**
+   * 메시지
+   */
+  message?: String;
 }
